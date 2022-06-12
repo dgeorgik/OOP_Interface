@@ -1,1 +1,17 @@
+public class Weapon implements Arming{
+    protected Weapon (double ability){
+        setAbility(ability);
+    }
 
+    public double getAbility() {
+        double current_ability=  ability;
+        return ability;
+    }
+
+    private void setAbility(double ability) {
+        if (ability>5) ability=5;
+        this.ability = ability;
+    }
+
+    private double ability;
+}
