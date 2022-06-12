@@ -1,0 +1,73 @@
+public class Audi implements Car {
+
+
+    public Audi(String model, String color, int horsePower, String countryProduced){
+        setModel(model);
+        setColor(color);
+        setHorsePower(horsePower);
+        setCountryProduced(countryProduced);
+
+    }
+
+
+    @Override
+    public String toString() {
+        return  String.format  ( "This is %s produced in %s and have %d tires"  ,
+                getModel(),
+                getCountryProduced (),
+                TIRES);
+    }
+
+    @Override
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setHorsePower(int horsePower) {
+        this.horsePower = horsePower;
+    }
+
+    public String getCountryProduced() {
+        return countryProduced;
+    }
+
+    public void setCountryProduced(String countryProduced) {
+        this.countryProduced = countryProduced;
+    }
+    @Override
+    public String getColor() {
+        return null;
+    }
+
+    @Override
+    public int getHorsePower() {
+        return 0;
+    }
+    String model;
+    String color ;
+    int horsePower ;
+    String  countryProduced;
+
+    public static void main(String[] args) {
+        Car audi = new
+                Audi("R8",
+                "gray",
+                510,
+                "Spain");
+        System.out.println(String.format(
+                "%s is %s color and have %s horse power",
+                audi.getModel(),
+                audi.getColor(),
+                audi.getHorsePower()));
+        System.out .println(audi.toString());
+    }
+
+}
