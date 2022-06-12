@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Russian implements Person {
+    public  Russian (String name){
+
+    }
+
+    String name;
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String sayHello() {
+        return "Привет!";
+    }
+
+    public static void
+    main(String[] args) {
+        List<Person> persons = new ArrayList<>();
+        persons.add(
+                new Russian (  " Иван  "
+                ));
+        persons.add(    new     European(  "  Adam" ));
+        persons.add(  new  Chinese(" Lee "   ));
+        for
+        (Person person : persons) {
+            System.out .println(person.sayHello());
+        }
+    }
+
+}
