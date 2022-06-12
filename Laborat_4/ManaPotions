@@ -1,0 +1,6 @@
+public class ManaPotions extends Potions{
+    public ManaPotions(int count){
+        super(count);
+
+    }
+}
