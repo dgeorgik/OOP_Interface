@@ -1,0 +1,32 @@
+public class Item implements Thing{
+
+
+    public int getCount() {
+        return count;
+    }
+
+    protected void setCount(int count) {
+        this.count = this.count+count;
+        if (this.count>5) this.count=5;
+
+    }
+
+    private int count=0;
+
+    protected    Item (int count){
+        setCount(count);
+    }
+    *
+    * */
+    @Override
+    public int use() {
+        int returnCount=count;
+        count=0;
+        return returnCount;
+    }
+
+    @Override
+    public boolean idUsed() {
+        return count>0;
+    }
+}
